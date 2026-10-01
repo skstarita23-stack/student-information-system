@@ -1,0 +1,56 @@
+/* login.css - university style login page with parallax */
+.uni-body { margin:0; font-family: Georgia, "Times New Roman", serif; color:#fff; background:#002147; overflow-x:hidden; }
+
+/* Parallax photo (moved by script.js). Gradient shows if the photo is missing. */
+.uni-bg {
+  position:fixed; top:-15%; left:0; width:100%; height:130%; z-index:-2;
+  background: url('images/campus.jpg') center / cover no-repeat,
+              linear-gradient(135deg, #002147 0%, #1b3a6b 60%, #a51c30 100%);
+  will-change: transform;
+}
+.uni-overlay {
+  position:fixed; inset:0; z-index:-1;
+  background: linear-gradient(180deg, rgba(0,33,71,.82), rgba(0,33,71,.55) 50%, rgba(0,20,45,.92));
+}
+
+/* Top bar */
+.uni-top { position:absolute; top:0; left:0; right:0; padding:22px 32px; display:flex; align-items:center; gap:12px;
+  border-bottom:1px solid rgba(201,162,39,.5); }
+.uni-crest { font-size:1.8rem; }
+.uni-name { font-size:1.15rem; letter-spacing:3px; text-transform:uppercase; }
+
+/* Hero */
+.uni-hero { min-height:100vh; max-width:1150px; margin:0 auto; padding:110px 24px 60px;
+  display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:center; }
+.uni-eyebrow { color:#c9a227; text-transform:uppercase; letter-spacing:4px; font-size:.85rem; margin:0 0 14px; }
+.uni-hero h1 { font-size:3rem; line-height:1.15; font-weight:normal; margin:0; color:#fff; }
+.uni-line { width:90px; height:3px; background:#c9a227; margin:22px 0; }
+.uni-motto { font-style:italic; font-size:1.3rem; margin:0 0 10px; color:#f3e7b3; }
+.uni-desc { color:#dbe4f0; max-width:460px; line-height:1.7; }
+
+/* Login card */
+.uni-card { background:#fff; color:#1f2937; padding:36px 32px; border-top:5px solid #a51c30;
+  border-radius:4px; box-shadow:0 20px 50px rgba(0,0,0,.45); }
+.uni-card h2 { margin:0; font-weight:normal; font-size:1.7rem; color:#002147; }
+.uni-card-sub { margin:4px 0 20px; color:#64748b; font-size:.95rem; }
+.uni-card .field label { font-family: Arial, sans-serif; color:#002147; }
+.uni-btn { width:100%; margin-top:22px; padding:13px; border:none; border-radius:3px; cursor:pointer;
+  background:#a51c30; color:#fff; font-size:1rem; letter-spacing:2px; text-transform:uppercase; font-family:Georgia,serif; }
+.uni-btn:hover { background:#7f1426; }
+
+/* Info section */
+.uni-info { background:rgba(255,255,255,.96); color:#1f2937; padding:80px 24px; }
+.uni-info-grid { max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:36px; text-align:center; }
+.uni-info h3 { color:#002147; font-weight:normal; font-size:1.4rem; margin:0 0 8px; border-bottom:2px solid #c9a227; display:inline-block; padding-bottom:6px; }
+.uni-info p { color:#475569; line-height:1.7; font-family:Arial,sans-serif; font-size:.95rem; }
+
+.uni-footer { background:#001429; text-align:center; padding:20px; font-size:.85rem; color:#9fb0c8; letter-spacing:1px; }
+
+/* Mobile */
+@media (max-width:820px) {
+  .uni-hero { grid-template-columns:1fr; padding-top:100px; gap:32px; }
+  .uni-hero h1 { font-size:2.1rem; }
+  .uni-info-grid { grid-template-columns:1fr; }
+  .uni-top { padding:16px 20px; }
+  .uni-name { font-size:.95rem; letter-spacing:2px; }
+}
